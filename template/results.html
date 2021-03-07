@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display results</title>
+    <style>
+h1 {
+	font-family: 'Lucida Console', cursive;
+	font-size: 40px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+h3 {
+	margin: 1em 0 0.5em 0;
+	color: #343434;
+	font-size: 22px;
+	line-height: 40px;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-family: 'Courier New', cursive;
+	letter-spacing: 1px;
+	font-style: italic;
+	text-align: center;
+}
+
+.tab
+{
+    text-align: center;
+    border: 3px solid green;
+
+}
+.showTable{
+overflow: auto;
+}
+
+
+    </style>
+</head>
+<body>
+<h1> ADABOOST MODEL OUTCOME </h1>
+<br><br>
+<div class="tab">
+<b><h3>Values entered are : </b> <br> </h3>
+{% for table in tables %}
+    <div class="showTable">{{ table|safe }}</div>
+{% endfor %}
+</div>
+
+<b class="prediction"> <h3>
+    <b>Our Churn Prediction for this customer is that he/she will be a <u> <b>{{ result}} </u></b>
+
+   </u></h3></b>
+
+</div>
+</body>
+</html>
